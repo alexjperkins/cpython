@@ -55,7 +55,6 @@ ELLIPSIS                '...'
 COLONEQUAL              ':='
 ALMOSTEQUAL             '~='
 
-
 OP
 AWAIT
 ASYNC

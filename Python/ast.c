@@ -1198,7 +1198,7 @@ ast_for_augassign(struct compiling *c, const node *n)
 static cmpop_ty
 ast_for_comp_op(struct compiling *c, const node *n)
 {
-    /* comp_op: '<'|'>'|'=='|'>='|'<='|'!='|'in'|'not' 'in'|'is'
+    /* comp_op: '<'|'>'|'=='|'>='|'<='|'!='|'~='|'in'|'not' 'in'|'is'
                |'is' 'not'
     */
     REQ(n, comp_op);
@@ -1209,6 +1209,8 @@ ast_for_comp_op(struct compiling *c, const node *n)
                 return Lt;
             case GREATER:
                 return Gt;
+            case ALMOSTEQUAL: 
+                return AlE;
             case EQEQUAL:                       /* == */
                 return Eq;
             case LESSEQUAL:
